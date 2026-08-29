@@ -3,6 +3,7 @@ package com.ytgld.chest_vows.event;
 import com.google.common.collect.HashMultimap;
 import com.ytgld.chest_vows.Handler;
 import com.ytgld.chest_vows.items.BaseVows;
+import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -16,6 +17,8 @@ import net.neoforged.neoforge.client.event.GatherSkippedAttributeTooltipsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.common.util.AttributeUtil;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 import java.util.ArrayList;
@@ -23,8 +26,17 @@ import java.util.List;
 import java.util.Set;
 
 public class CVEvent {
+
     @SubscribeEvent
-    public void Tick(EntityTickEvent.Pre event){
+    public void event(LivingDamageEvent.Pre event){
+        SwordHolder.event(event);
+    }
+    @SubscribeEvent
+    public void event(SweepAttackEvent event){
+        SwordHolder.event(event);
+    }
+    @SubscribeEvent
+    public void event(EntityTickEvent.Pre event){
         if (event.getEntity() instanceof Player livingEntity) {
             Set<String> set = livingEntity.getData(CVAttReg.vows);
             for (String name : set){
@@ -37,7 +49,7 @@ public class CVEvent {
     }
 
     @SubscribeEvent
-    public void AddAttributeTooltipsEvent(AddAttributeTooltipsEvent evt){
+    public void event(AddAttributeTooltipsEvent evt){
         AttributeTooltipContext context = evt.getContext();
         ItemStack stack = evt.getStack();
         GatherSkippedAttributeTooltipsEvent skipped =

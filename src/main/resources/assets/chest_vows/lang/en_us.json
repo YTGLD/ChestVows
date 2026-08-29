@@ -19,6 +19,11 @@
   "chest_vows.configuration.BloodVow.tooltip": "血之誓令",
   "chest_vows.configuration.BloodVow.button": "血之誓令",
 
+  "chest_vows.vow.sword_holder": "违抗者，斩！",
+  "item.chest_vows.sword_holder": "魔族持剑者",
+  "item.chest_vows.sword_holder.tool.string.1": "攻击有%d%%的可能触发多段连斩",
+  "item.chest_vows.sword_holder.tool.string.2": "攻击时有%d%%的概率进行横扫",
+  "item.chest_vows.sword_holder.tool.string.3": "非剑类武器造成的伤害降低%d%%",
 
   "chest_vows.vow.blood_sacrifice": "苍天之血，饮之则长生",
   "item.chest_vows.blood_sacrifice": "血祭",
