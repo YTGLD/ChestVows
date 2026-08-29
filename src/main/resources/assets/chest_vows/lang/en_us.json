@@ -1,0 +1,8 @@
+{
+  "chest_vows.vows": "誓令",
+  "chest_vows.vows.attribute": "宣告誓言后：",
+  "chest_vows.vows.has": "你已宣告此誓言",
+  "chest_vows.vows.max": "你已宣告太多的誓言",
+  "chest_vows.vows.off": "你已解除相关誓约",
+  "chest_vows.vows.cannot.off": "相关誓约并不存在"
+}
