@@ -1,6 +1,5 @@
 package com.ytgld.chest_vows.other;
 
-import com.ytgld.chest_item.Chestitem;
 import com.ytgld.chest_item.items.memory.TheMemoryDataHandler;
 import com.ytgld.chest_vows.ChestVows;
 import net.neoforged.neoforge.attachment.AttachmentType;

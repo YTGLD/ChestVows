@@ -39,17 +39,30 @@ public class RenderVowItem {
     }
 
     public static void renderItem(GuiGraphics guiGraphics, PoseStack pose, ItemStack stack, int x, int y, int seed) {
-        if (stack.getItem() instanceof BaseVows dna) {
-            if (!itemStackIntegerHashMap.containsKey(dna)) {
-                itemStackIntegerHashMap.put(dna, new AlphaItem(0, true));
+        if (stack.getItem() instanceof BaseVows baseVows) {
+            if (!itemStackIntegerHashMap.containsKey(baseVows)) {
+                itemStackIntegerHashMap.put(baseVows, new AlphaItem(0, true));
             }
-            itemStackIntegerHashMap.get(dna).setLook(true);
-            addBlackLight(guiGraphics, pose, dna, x, y, seed);
+            itemStackIntegerHashMap.get(baseVows).setLook(true);
+            addBlackLight(guiGraphics, pose, baseVows, x, y, seed);
+            for (int i = 0; i < baseVows.colorAndImage().size(); i++) {
+                BaseVows.ColorAndImage colorAndImage = baseVows.colorAndImage().get(i);
+                ResourceLocation image = colorAndImage.image();
+                int color = colorAndImage.color();
+                pose.pushPose();
+                pose.translate(x, y,0);
+                int size = 16;
+                new MGuiGraphics.GUI(VowsRenders::getVows,true).blit(guiGraphics, image,
+                       0,0, 0, 0,
+                        size, size, size, size,
+                        color);
+                pose.popPose();
+            }
         }
     }
 
-    private static void  addBlackLight(GuiGraphics guiGraphics,PoseStack pose, BaseVows dna,int x, int y,int seed){
-        int a = (int) (itemStackIntegerHashMap.get(dna).alpha / 1.5f);
+    private static void  addBlackLight(GuiGraphics guiGraphics,PoseStack pose, BaseVows baseVows,int x, int y,int seed){
+        int a = (int) (itemStackIntegerHashMap.get(baseVows).alpha / 1.5f);
         int r = 20;
         int g = 0;
         int b = 10;
@@ -66,13 +79,12 @@ public class RenderVowItem {
         addCom(18,-timeBase * 2  + (float)Math.PI / 8  ,Light.ARGB.color(a, r, g, b), guiGraphics, pose,
                 ChestVows.fromNamespaceAndPath(ChestVows.MODID, "textures/gui/ci_star.png"), x, y, seed);
 
-
-        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
-                guiGraphics, pose,
-                base, x, y, 0);
-        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
-                guiGraphics, pose,
-                base, x, y, 180);
+//        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
+//                guiGraphics, pose,
+//                base, x, y, 0);
+//        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
+//                guiGraphics, pose,
+//                base, x, y, 180);
 
     }
 

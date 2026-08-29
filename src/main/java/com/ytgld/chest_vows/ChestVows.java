@@ -5,6 +5,8 @@ import com.ytgld.chest_item.sounds.CISoundDefinitionsProvider;
 import com.ytgld.chest_vows.config.ChestVowsLanguageProvider;
 import com.ytgld.chest_vows.items.CVItems;
 import com.ytgld.chest_vows.other.CVAttReg;
+import com.ytgld.chest_vows.sounds.CVSounds;
+import com.ytgld.chest_vows.sounds.ChestVowsSoundProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -17,7 +19,7 @@ import org.slf4j.Logger;
 
 @Mod(ChestVows.MODID)
 public class ChestVows {
-    public static final String MODID = "examplemod";
+    public static final String MODID = "chest_vows";
     public static final Logger LOGGER = LogUtils.getLogger();
     public ChestVows(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::onGatherData);
@@ -25,6 +27,8 @@ public class ChestVows {
 
         CVAttReg.ATTACHMENT_TYPES.register(modEventBus);
         CVItems.ITEMS.register(modEventBus);
+        CVItems.Tab.CREATIVE_MODE_TABS.register(modEventBus);
+        CVSounds.REGISTRY.register(modEventBus);
     }
 
     public static ResourceLocation fromNamespaceAndPath(String modid ,String  path){
@@ -39,7 +43,7 @@ public class ChestVows {
         gen.addProvider(event.includeClient(),new ChestVowsLanguageProvider(packOutput));
         gen.addProvider(
                 event.includeClient(),
-                new CISoundDefinitionsProvider(packOutput, existingFileHelper)
+                new ChestVowsSoundProvider(packOutput, existingFileHelper)
         );
     }
 }

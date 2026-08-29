@@ -4,6 +4,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.ytgld.chest_item.renderer.light.Light;
 import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.sounds.CVSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -11,6 +12,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -42,6 +44,7 @@ public abstract class BaseVows extends Item {
             return super.use(level, player, usedHand);
         }else {
             if (Handler.getVowsItems(player).size() < Handler.getMaxVows(player)) {
+                player.level().playSound(null,player.blockPosition(), CVSounds.use_vows.value(), SoundSource.PLAYERS,1,1);
                 Handler.addVows(player, itemName());
                 stack.shrink(1);
                 return InteractionResultHolder.pass(stack);
