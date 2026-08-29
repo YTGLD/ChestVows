@@ -15,8 +15,8 @@ public class ChestVowsLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         for (ChestVowsRegisterItemConfig registerItemConfig : ChestVowsConfigPluginFinder.getModPlugins()){
             for (ChestVowsRegisterItemConfig.CIString theLanguageProvider : registerItemConfig.theLanguageProvider()) {
-                add("chest_item.configuration." + theLanguageProvider.path(), theLanguageProvider.doIt());
-                add("chest_item.config." + theLanguageProvider.path(), theLanguageProvider.doName());
+                add("chest_vows.configuration." + theLanguageProvider.path(), theLanguageProvider.doIt());
+                add("chest_vows.config." + theLanguageProvider.path(), theLanguageProvider.doName());
             }
         }
     }

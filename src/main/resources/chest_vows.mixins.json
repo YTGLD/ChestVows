@@ -3,6 +3,7 @@
   "package": "com.ytgld.chest_vows.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ComplexComponentsMixin",
     "common.PlayerMixin"
   ],
   "injectors": {
@@ -12,6 +13,7 @@
     "requireAnnotations": true
   },
   "client": [
+    "ChestMenuScreenMixin",
     "client.GuiGraphicsMixin"
   ]
 }

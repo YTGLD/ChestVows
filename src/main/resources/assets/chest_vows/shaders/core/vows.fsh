@@ -13,22 +13,22 @@ out vec4 fragColor;
 
 
 void main() {
-    float time = GameTime * 1200.0;
+    float time = GameTime * 4500.0;
 
     vec2 uv = texCoord0;
 
     float wave1 = sin(
-        uv.y * 12.0 +
+        uv.y * 24.0 +
         time * 0.7
     );
 
     float wave2 = cos(
-        uv.x * 15.0 -
+        uv.x * 30.0 -
         time * 0.55
     );
 
-    uv.x += wave1 * 0.012;
-    uv.y += wave2 * 0.012;
+    uv.x += wave1 * 0.025;
+    uv.y += wave2 * 0.025;
 
     float wave3 = sin(
         (uv.x + uv.y) * 35.0 +

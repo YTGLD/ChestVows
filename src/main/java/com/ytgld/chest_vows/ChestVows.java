@@ -1,8 +1,8 @@
 package com.ytgld.chest_vows;
 
 import com.mojang.logging.LogUtils;
-import com.ytgld.chest_item.sounds.CISoundDefinitionsProvider;
 import com.ytgld.chest_vows.config.ChestVowsLanguageProvider;
+import com.ytgld.chest_vows.event.CVEvent;
 import com.ytgld.chest_vows.items.CVItems;
 import com.ytgld.chest_vows.other.CVAttReg;
 import com.ytgld.chest_vows.sounds.CVSounds;
@@ -13,6 +13,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
@@ -23,12 +25,15 @@ public class ChestVows {
     public static final Logger LOGGER = LogUtils.getLogger();
     public ChestVows(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::onGatherData);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.fc);
 
 
         CVAttReg.ATTACHMENT_TYPES.register(modEventBus);
         CVItems.ITEMS.register(modEventBus);
         CVItems.Tab.CREATIVE_MODE_TABS.register(modEventBus);
         CVSounds.REGISTRY.register(modEventBus);
+
+        NeoForge.EVENT_BUS.register(new CVEvent());
     }
 
     public static ResourceLocation fromNamespaceAndPath(String modid ,String  path){

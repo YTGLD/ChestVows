@@ -1,4 +1,11 @@
 {
+
+  "chest_vows.config.BloodSacrifice": "疤痕组织最大值奖励",
+  "chest_vows.config.BloodSacrifice2": "疤痕组织在被根除时产生的冷却惩罚",
+  "chest_vows.configuration.BloodSacrifice": "血祭",
+  "chest_vows.configuration.BloodSacrifice2": "血祭2",
+
+  "chest_vows.tab": "箱子里的小饰品——誓令",
   "chest_vows.vows": "誓令",
   "chest_vows.vows.attribute": "宣告誓言后：",
   "chest_vows.vows.has": "你已宣告此誓言",
@@ -6,7 +13,15 @@
   "chest_vows.vows.off": "你已解除相关誓约",
   "chest_vows.vows.cannot.off": "相关誓约并不存在",
 
+  "chest_vows.configuration.Common": "常规配置",
+
+  "chest_vows.configuration.BloodVow": "血之誓令",
+  "chest_vows.configuration.BloodVow.tooltip": "血之誓令",
+  "chest_vows.configuration.BloodVow.button": "血之誓令",
 
 
-  "chest_vows.vow.blood_sacrifice": "血，饮则长生"
+  "chest_vows.vow.blood_sacrifice": "苍天之血，饮之则长生",
+  "item.chest_vows.blood_sacrifice": "血祭",
+  "item.chest_vows.blood_sacrifice.tool.string.1": "疤痕组织最大值增加%d%%且吸收全部伤害",
+  "item.chest_vows.blood_sacrifice.tool.string.2": "疤痕组织在被根除时产生的冷却增加%d%%"
 }

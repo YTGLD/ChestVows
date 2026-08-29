@@ -1,7 +1,7 @@
 package com.ytgld.chest_vows.items;
 
 import com.ytgld.chest_vows.ChestVows;
-import com.ytgld.chest_vows.items.vows.BloodSacrifice;
+import com.ytgld.chest_vows.items.vows.blood.BloodSacrifice;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -22,7 +22,7 @@ public class CVItems {
         public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ChestVows.MODID);
         public static final DeferredHolder<CreativeModeTab, CreativeModeTab> tab =
                 CREATIVE_MODE_TABS.register("chest_vows", () -> CreativeModeTab.builder()
-                .title(Component.translatable("chest_vows.vows"))
+                .title(Component.translatable("chest_vows.tab"))
                 .icon(CVItems.BloodSacrifice_.get()::getDefaultInstance)
                 .displayItems((parameters, output) -> {
                     output.accept(CVItems.BloodSacrifice_.get());

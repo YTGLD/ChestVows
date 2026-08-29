@@ -56,6 +56,11 @@ public class RenderVowItem {
                        0,0, 0, 0,
                         size, size, size, size,
                         color);
+                new MGuiGraphics.GUI(CIStateShardsHasBlack::getHasBlock,true).blit(guiGraphics, image,
+                        0,0, 0, 0,
+                        size, size, size, size,
+                        color);
+
                 pose.popPose();
             }
         }

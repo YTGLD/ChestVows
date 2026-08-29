@@ -3,6 +3,7 @@ package com.ytgld.chest_vows.items;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.ytgld.chest_item.renderer.light.Light;
+import com.ytgld.chest_vows.ChestVows;
 import com.ytgld.chest_vows.Handler;
 import com.ytgld.chest_vows.sounds.CVSounds;
 import net.minecraft.ChatFormatting;
@@ -23,6 +24,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.ChestBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -35,12 +37,12 @@ public abstract class BaseVows extends Item {
     public abstract List<ColorAndImage> colorAndImage();
     public abstract Component textMain();
     public record ColorAndImage(int color , ResourceLocation image){}
-
+    public abstract int backColor ();
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         ItemStack stack = player.getItemInHand(usedHand);
         if (Handler.getVowsItems(player).contains(player.getItemInHand(usedHand).getItem())) {
-            player.displayClientMessage(Component.translatable("chest_vows.vows.has").withStyle(Style.EMPTY.withColor(0xffff0000)),false);
+            player.displayClientMessage(Component.translatable("chest_vows.vows.has").withStyle(Style.EMPTY.withColor(0xffff0000)),true);
             return super.use(level, player, usedHand);
         }else {
             if (Handler.getVowsItems(player).size() < Handler.getMaxVows(player)) {
@@ -49,7 +51,7 @@ public abstract class BaseVows extends Item {
                 stack.shrink(1);
                 return InteractionResultHolder.pass(stack);
             } else {
-                player.displayClientMessage(Component.translatable("chest_vows.vows.max").withStyle(Style.EMPTY.withColor(0xffff0000)),false);
+                player.displayClientMessage(Component.translatable("chest_vows.vows.max").withStyle(Style.EMPTY.withColor(0xffff0000)),true);
             }
         }
         return super.use(level, player, usedHand);
@@ -60,8 +62,8 @@ public abstract class BaseVows extends Item {
         MutableComponent co = component.copy();
         MutableComponent soul =  Component
                 .translatable("chest_vows.vows")
-                .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(Light.ARGB.color(255, 120, 90, 180))));
-        co.setStyle(Style.EMPTY.withColor(Light.ARGB.color(255, 210, 75, 210)));
+                .withStyle(Style.EMPTY.withColor(TextColor.fromRgb(Light.ARGB.color(255, 200, 90, 180))));
+        co.setStyle(Style.EMPTY.withColor(Light.ARGB.color(255, 250, 110, 200)));
 
         return soul.append(Component.literal("<").withStyle(ChatFormatting.GRAY))
                 .append(co)
@@ -79,18 +81,21 @@ public abstract class BaseVows extends Item {
     public void applyText(ItemStack stack,List<Component> tooltipComponents,TooltipFlag tooltipFlag){}
 
     public void addText(List<Component> list,MutableComponent component,boolean positive){
-        int color = Light.ARGB.color(255,210,45,80);
+        int color = Light.ARGB.color(255,180,135,70);
         String at = "+";
         if (!positive) {
-            color = Light.ARGB.color(255,180,135,70);
+            color = Light.ARGB.color(255,210,45,80);
             at = "-";
         }
         list.add(Component.literal(at).withStyle(Style.EMPTY.withColor(color))
                 .append(component.withStyle(Style.EMPTY.withColor(color))));
     }
+    public ResourceLocation id(){
+        return ResourceLocation.parse(this.itemName());
+    }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public final void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
         tooltipComponents.add(textMain().copy().withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
     }
