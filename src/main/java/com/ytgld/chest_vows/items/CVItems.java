@@ -1,10 +1,7 @@
 package com.ytgld.chest_vows.items;
 
 import com.ytgld.chest_vows.ChestVows;
-import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
-import com.ytgld.chest_vows.items.vows.blood.BloodSacrifice;
-import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
-import com.ytgld.chest_vows.items.vows.blood.Symbiosis;
+import com.ytgld.chest_vows.items.vows.blood.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -35,6 +32,10 @@ public class CVItems {
             register("symbiosis",(resourceLocation ->
                     new Symbiosis(new Item.Properties().stacksTo(1))));
 
+    public static final DeferredHolder<Item ,Item > ChiefPriest_ =
+            register("chief_priest",(resourceLocation ->
+                    new ChiefPriest(new Item.Properties().stacksTo(1))));
+
 
 
 
@@ -52,6 +53,7 @@ public class CVItems {
                     output.accept(CVItems.SwordHolder_.get());
                     output.accept(CVItems.BloodArmy_.get());
                     output.accept(CVItems.Symbiosis_.get());
+                    output.accept(CVItems.ChiefPriest_.get());
 
 
 

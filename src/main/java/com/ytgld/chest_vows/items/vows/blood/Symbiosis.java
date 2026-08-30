@@ -104,7 +104,7 @@ public class Symbiosis extends BloodVow {
     public Multimap<Holder<Attribute>, AttributeModifier> doAttribute(LivingEntity livingEntity, Item item) {
         Multimap<Holder<Attribute>, AttributeModifier> modifiers = HashMultimap.create();
 
-        float down = ConfigItem.number1.get().intValue();
+        float down = ConfigItem.number1.get().floatValue();
 
         //越大越慢
         modifiers.put(AttReg.hyperplasia_speed, new AttributeModifier(id(),

@@ -1,0 +1,20 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    {"item":"chest_item:soul_bottle"},
+
+    {"item":"chest_item:fusion"},
+    {"item":"chest_item:heart"},
+    {"item":"chest_item:self_increasing_heart"},
+    {"item":"chest_item:forever_curtain"}
+
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 16,
+    "chest_item:spirit_soul": 16,
+    "chest_item:magic_soul": 16
+  },
+  "result": "chest_vows:symbiosis",
+  "id": "chest_vows:symbiosis",
+  "count": 1
+}

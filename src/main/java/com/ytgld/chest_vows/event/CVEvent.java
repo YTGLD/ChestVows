@@ -4,6 +4,7 @@ import com.google.common.collect.HashMultimap;
 import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.items.BaseVows;
 import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
+import com.ytgld.chest_vows.items.vows.blood.ChiefPriest;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
@@ -33,10 +34,12 @@ public class CVEvent {
     public void event(LivingDamageEvent.Pre event){
         SwordHolder.event(event);
         BloodArmy.event(event);
+        ChiefPriest.event(event);
     }
     @SubscribeEvent
     public void event(LivingHealEvent event){
         BloodArmy.event(event);
+        ChiefPriest.event(event);
     }
     @SubscribeEvent
     public void event(SweepAttackEvent event){
