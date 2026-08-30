@@ -1,6 +1,7 @@
 package com.ytgld.chest_vows.items;
 
 import com.ytgld.chest_vows.ChestVows;
+import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
 import com.ytgld.chest_vows.items.vows.blood.BloodSacrifice;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import net.minecraft.core.registries.Registries;
@@ -25,6 +26,10 @@ public class CVItems {
             register("sword_holder",(resourceLocation ->
                     new SwordHolder(new Item.Properties().stacksTo(1))));
 
+    public static final DeferredHolder<Item ,Item > BloodArmy_ =
+            register("blood_army",(resourceLocation ->
+                    new BloodArmy(new Item.Properties().stacksTo(1))));
+
 
 
 
@@ -40,6 +45,7 @@ public class CVItems {
 
                     output.accept(CVItems.BloodSacrifice_.get());
                     output.accept(CVItems.SwordHolder_.get());
+                    output.accept(CVItems.BloodArmy_.get());
 
 
 

@@ -2,7 +2,7 @@ package com.ytgld.chest_vows.mixin.common;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.items.BaseVows;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.core.Holder;
@@ -29,7 +29,7 @@ public class PlayerMixin {
         Player player = (Player) (Object) this;
         Set<String> set = player.getData(CVAttReg.vows);
         for (String name : set){
-            Item item = Handler.getVowsItemForName(name);
+            Item item = VowHandler.getVowsItemForName(name);
             if (item instanceof BaseVows baseVows) {
                 Multimap<Holder<Attribute>, AttributeModifier> doAttribute = baseVows.doAttribute(player,item);
                 ChestVows$AttributeModifier.getOrDefault(item, HashMultimap.create()).forEach((attributeHolder, attributeModifier)->{

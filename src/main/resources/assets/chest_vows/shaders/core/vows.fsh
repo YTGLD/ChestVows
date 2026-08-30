@@ -37,12 +37,12 @@ void main() {
     );
 
     uv += wave3 * 0.003;
-    uv = clamp(uv, 0.0, 1.0);
+    uv = clamp(
+        uv,
+        vec2(0.03),
+        vec2(0.97)
+    );
     vec4 color = texture(Sampler0, uv);
-
-    if (color.a <= 0.001) {
-        discard;
-    }
 
     vec3 rgb = color.rgb;
 

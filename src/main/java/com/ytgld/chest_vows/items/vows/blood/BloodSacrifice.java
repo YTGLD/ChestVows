@@ -5,7 +5,7 @@ import com.google.common.collect.Multimap;
 import com.ytgld.chest_item.items.AttReg;
 import com.ytgld.chest_item.renderer.light.Light;
 import com.ytgld.chest_vows.ChestVows;
-import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.config.ChestVowsConfigPlugin;
 import com.ytgld.chest_vows.config.ChestVowsRegisterItemConfig;
 import com.ytgld.chest_vows.items.BloodVow;
@@ -84,19 +84,19 @@ public class BloodSacrifice extends BloodVow {
         return modifiers;
     }
     public static void mixinHyperplasia(LivingEntity living, CallbackInfoReturnable<Boolean> cir){
-        if (Handler.has(living, CVItems.BloodSacrifice_.get())) {
+        if (VowHandler.has(living, CVItems.BloodSacrifice_.get())) {
             cir.setReturnValue(true);
         }
     }
     @Override
     public String itemName() {
-        return Handler.mixinName("blood_sacrifice");
+        return VowHandler.mixinName("blood_sacrifice");
     }
 
     @Override
     public List<ColorAndImage> colorAndImage() {
         return List.of(
-                new ColorAndImage(Light.ARGB.color(255,240,50,70),
+                new ColorAndImage(Light.ARGB.color(255,255,100,170),
                         ChestVows.fromNamespaceAndPath(ChestVows.MODID,"textures/vows/blood_sacrifice.png"))
         );
     }

@@ -1,8 +1,9 @@
 package com.ytgld.chest_vows.event;
 
 import com.google.common.collect.HashMultimap;
-import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.items.BaseVows;
+import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
@@ -18,6 +19,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.common.util.AttributeUtil;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
@@ -30,6 +32,11 @@ public class CVEvent {
     @SubscribeEvent
     public void event(LivingDamageEvent.Pre event){
         SwordHolder.event(event);
+        BloodArmy.event(event);
+    }
+    @SubscribeEvent
+    public void event(LivingHealEvent event){
+        BloodArmy.event(event);
     }
     @SubscribeEvent
     public void event(SweepAttackEvent event){
@@ -40,7 +47,7 @@ public class CVEvent {
         if (event.getEntity() instanceof Player livingEntity) {
             Set<String> set = livingEntity.getData(CVAttReg.vows);
             for (String name : set){
-                Item item = Handler.getVowsItemForName(name);
+                Item item = VowHandler.getVowsItemForName(name);
                 if (item instanceof BaseVows baseVows) {
                     baseVows.tickVows(livingEntity);
                 }

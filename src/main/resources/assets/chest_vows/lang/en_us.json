@@ -2,8 +2,14 @@
 
   "chest_vows.config.BloodSacrifice": "疤痕组织最大值奖励",
   "chest_vows.config.BloodSacrifice2": "疤痕组织在被根除时产生的冷却惩罚",
+  "chest_vows.config.SwordHolder": "触发多段连斩的概率",
+  "chest_vows.config.SwordHolder2": "触发横扫的概率",
+  "chest_vows.config.SwordHolder3": "剑类武器造成的伤害惩罚",
   "chest_vows.configuration.BloodSacrifice": "血祭",
   "chest_vows.configuration.BloodSacrifice2": "血祭2",
+  "chest_vows.configuration.SwordHolder": "魔族持剑者",
+  "chest_vows.configuration.SwordHolder2": "魔族持剑者2",
+  "chest_vows.configuration.SwordHolder3": "魔族持剑者3",
 
   "chest_vows.tab": "箱子里的小饰品——誓令",
   "chest_vows.vows": "誓令",
@@ -19,11 +25,17 @@
   "chest_vows.configuration.BloodVow.tooltip": "血之誓令",
   "chest_vows.configuration.BloodVow.button": "血之誓令",
 
-  "chest_vows.vow.sword_holder": "违抗者，斩！",
+  "chest_vows.vow.sword_holder": "违命者，斩！",
   "item.chest_vows.sword_holder": "魔族持剑者",
   "item.chest_vows.sword_holder.tool.string.1": "攻击有%d%%的可能触发多段连斩",
   "item.chest_vows.sword_holder.tool.string.2": "攻击时有%d%%的概率进行横扫",
   "item.chest_vows.sword_holder.tool.string.3": "非剑类武器造成的伤害降低%d%%",
+
+  "chest_vows.vow.blood_army": "“那不是是破天军！快逃！”",
+  "item.chest_vows.blood_army": "破望血军",
+  "item.chest_vows.blood_army.tool.string.1": "提高%d%%生命值恢复速度",
+  "item.chest_vows.blood_army.tool.string.2": "生命值每隔%d秒进行自然恢复",
+  "item.chest_vows.blood_army.tool.string.3": "受到伤害后的%d秒内将无法受到治疗",
 
   "chest_vows.vow.blood_sacrifice": "苍天之血，饮之则长生",
   "item.chest_vows.blood_sacrifice": "血祭",

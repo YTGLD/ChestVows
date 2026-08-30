@@ -3,7 +3,7 @@ package com.ytgld.chest_vows.items.vows.blood;
 import com.ytgld.chest_item.items.AttReg;
 import com.ytgld.chest_item.renderer.light.Light;
 import com.ytgld.chest_vows.ChestVows;
-import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.config.ChestVowsConfigPlugin;
 import com.ytgld.chest_vows.config.ChestVowsRegisterItemConfig;
 import com.ytgld.chest_vows.items.BloodVow;
@@ -11,7 +11,6 @@ import com.ytgld.chest_vows.items.CVItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TooltipFlag;
@@ -76,7 +75,7 @@ public class SwordHolder extends BloodVow {
     }
     public static void event(SweepAttackEvent event){
         if (event.getEntity() instanceof Player player) {
-            if (Handler.has(player, CVItems.SwordHolder_.get())) {
+            if (VowHandler.has(player, CVItems.SwordHolder_.get())) {
                 int lv = (int)(double)ConfigItem.number2.get();
                 if (player.getRandom().nextInt(100) <= lv) {
                     event.setSweeping(true);
@@ -87,7 +86,7 @@ public class SwordHolder extends BloodVow {
 
     public static void event(LivingDamageEvent.Pre event){
         if (event.getSource().getEntity() instanceof Player player) {
-            if (Handler.has(player, CVItems.SwordHolder_.get())) {
+            if (VowHandler.has(player, CVItems.SwordHolder_.get())) {
                 //斩击
                 int lv = (int)(double)ConfigItem.number1.get();
                 float damageDown = (float) ConfigItem.number3.getAsDouble();
@@ -97,8 +96,12 @@ public class SwordHolder extends BloodVow {
 
                 if (player.getRandom().nextInt(100) <= lv) {
                     if (event.getEntity() instanceof LivingEntity entity) {
-                        entity.setData(AttReg.swordIntent,entity.getData(AttReg.swordIntent) + 2);
-                        entity.setData(AttReg.slashing,entity.getData(AttReg.slashing) + 2);
+                        if (!player.getCooldowns().isOnCooldown(CVItems.SwordHolder_.get())) {
+                            entity.setData(AttReg.swordIntent, entity.getData(AttReg.swordIntent) + 2);
+                            entity.setData(AttReg.slashing, entity.getData(AttReg.slashing) + 2);
+
+                            player.getCooldowns().addCooldown(CVItems.SwordHolder_.get(),60);
+                        }
                     }
                 }
             }
@@ -121,13 +124,13 @@ public class SwordHolder extends BloodVow {
 
     @Override
     public String itemName() {
-        return Handler.mixinName("sword_holder");
+        return VowHandler.mixinName("sword_holder");
     }
 
     @Override
     public List<ColorAndImage> colorAndImage() {
         return List.of(
-                new ColorAndImage(Light.ARGB.color(255,240,50,70),
+                new ColorAndImage(Light.ARGB.color(255,255,100,170),
                         ChestVows.fromNamespaceAndPath(ChestVows.MODID,"textures/vows/sword_holder.png"))
         );
     }

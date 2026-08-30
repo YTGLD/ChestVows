@@ -3,8 +3,7 @@ package com.ytgld.chest_vows.items;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.ytgld.chest_item.renderer.light.Light;
-import com.ytgld.chest_vows.ChestVows;
-import com.ytgld.chest_vows.Handler;
+import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.sounds.CVSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
@@ -24,7 +23,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.ChestBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -41,13 +39,13 @@ public abstract class BaseVows extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         ItemStack stack = player.getItemInHand(usedHand);
-        if (Handler.getVowsItems(player).contains(player.getItemInHand(usedHand).getItem())) {
+        if (VowHandler.getVowsItems(player).contains(player.getItemInHand(usedHand).getItem())) {
             player.displayClientMessage(Component.translatable("chest_vows.vows.has").withStyle(Style.EMPTY.withColor(0xffff0000)),true);
             return super.use(level, player, usedHand);
         }else {
-            if (Handler.getVowsItems(player).size() < Handler.getMaxVows(player)) {
+            if (VowHandler.getVowsItems(player).size() < VowHandler.getMaxVows(player)) {
                 player.level().playSound(null,player.blockPosition(), CVSounds.use_vows.value(), SoundSource.PLAYERS,1,1);
-                Handler.addVows(player, itemName());
+                VowHandler.addVows(player, itemName());
                 stack.shrink(1);
                 return InteractionResultHolder.pass(stack);
             } else {
@@ -70,7 +68,7 @@ public abstract class BaseVows extends Item {
                 .append(Component.literal(">").withStyle(ChatFormatting.GRAY));
     }
 
-    public void tickVows(LivingEntity entity){
+    public void tickVows(Player entity){
 
     }
 

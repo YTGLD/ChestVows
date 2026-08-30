@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Handler {
+public class VowHandler {
     public static boolean has(LivingEntity player,String itemName){
         Set<String> strings = player.getData(CVAttReg.vows);
         return strings.contains(itemName);
