@@ -37,6 +37,13 @@
   "item.chest_vows.blood_army.tool.string.2": "生命值每隔%d秒进行自然恢复",
   "item.chest_vows.blood_army.tool.string.3": "受到伤害后的%d秒内将无法受到治疗",
 
+  "chest_vows.vow.symbiosis": "四相四侵，粉碎这因果的枷锁",
+  "item.chest_vows.symbiosis": "四相共生",
+  "item.chest_vows.symbiosis.tool.string.1": "允许在创伤之痕恢复时继续恢复其余护盾",
+  "item.chest_vows.symbiosis.tool.string.2": "创伤之痕随时间恢复",
+  "item.chest_vows.symbiosis.tool.string.3": "创伤之痕不再可以吞噬护盾",
+  "item.chest_vows.symbiosis.tool.string.4": "除创伤之痕外的护盾恢复速度降低50%",
+
   "chest_vows.vow.blood_sacrifice": "苍天之血，饮之则长生",
   "item.chest_vows.blood_sacrifice": "血祭",
   "item.chest_vows.blood_sacrifice.tool.string.1": "疤痕组织最大值增加%d%%且吸收全部伤害",
