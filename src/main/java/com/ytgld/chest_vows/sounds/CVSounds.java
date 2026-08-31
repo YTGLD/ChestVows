@@ -14,4 +14,13 @@ public class CVSounds {
             "use_vows",
             SoundEvent::createVariableRangeEvent
     );
+    public static final Holder<SoundEvent> soul_pickup =
+            REGISTRY.register("soul_pickup",SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> soul_create =
+            REGISTRY.register("soul_create",SoundEvent::createVariableRangeEvent);
+
+    public static final Holder<SoundEvent> soul_fly =
+            REGISTRY.register("soul_fly",SoundEvent::createVariableRangeEvent);
+
 }

@@ -42,6 +42,10 @@
   "chest_vows.vows.off": "你已解除相关誓约",
   "chest_vows.vows.cannot.off": "相关誓约并不存在",
 
+  "sound.chest_vows.use_vows": "誓令：进行绑定",
+  "sound.chest_vows.soul_create":"灵魂：产生",
+  "sound.chest_vows.soul_fly": "灵魂：爆发",
+  "sound.chest_vows.soul_pickup":"灵魂：拾取",
   "chest_vows.configuration.Common": "常规配置",
 
   "chest_vows.configuration.BloodVow": "血之誓令",

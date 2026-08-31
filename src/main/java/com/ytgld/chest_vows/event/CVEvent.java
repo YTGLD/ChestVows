@@ -22,6 +22,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.common.util.AttributeUtil;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -61,7 +62,10 @@ public class CVEvent {
             }
         }
     }
-
+    @SubscribeEvent
+    public void event(LivingDeathEvent event){
+        SpiritSoulHandler.event(event);
+    }
     @SubscribeEvent
     public void event(AddAttributeTooltipsEvent evt){
         AttributeTooltipContext context = evt.getContext();

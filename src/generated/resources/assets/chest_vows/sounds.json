@@ -1,4 +1,34 @@
 {
+  "soul_create": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "chest_vows:soul_create",
+        "stream": true
+      }
+    ],
+    "subtitle": "sound.chest_vows.soul_create"
+  },
+  "soul_fly": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "chest_vows:soul_fly",
+        "stream": true
+      }
+    ],
+    "subtitle": "sound.chest_vows.soul_fly"
+  },
+  "soul_pickup": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "chest_vows:soul_pickup",
+        "stream": true
+      }
+    ],
+    "subtitle": "sound.chest_vows.soul_pickup"
+  },
   "use_vows": {
     "replace": true,
     "sounds": [

@@ -20,5 +20,29 @@ public class ChestVowsSoundProvider extends SoundDefinitionsProvider {
                 .subtitle("sound.chest_vows.use_vows")
                 .replace(true)
         );
+        add(CVSounds.soul_create.value(), SoundDefinition.definition()
+                .with(sound("chest_vows:soul_create",SoundDefinition.SoundType.SOUND)
+                        .stream(true)
+                        .preload(false)
+                )
+                .subtitle("sound.chest_vows.soul_create")
+                .replace(true)
+        );
+        add(CVSounds.soul_fly.value(), SoundDefinition.definition()
+                .with(sound("chest_vows:soul_fly",SoundDefinition.SoundType.SOUND)
+                        .stream(true)
+                        .preload(false)
+                )
+                .subtitle("sound.chest_vows.soul_fly")
+                .replace(true)
+        );
+        add(CVSounds.soul_pickup.value(), SoundDefinition.definition()
+                .with(sound("chest_vows:soul_pickup",SoundDefinition.SoundType.SOUND)
+                        .stream(true)
+                        .preload(false)
+                )
+                .subtitle("sound.chest_vows.soul_pickup")
+                .replace(true)
+        );
     }
 }

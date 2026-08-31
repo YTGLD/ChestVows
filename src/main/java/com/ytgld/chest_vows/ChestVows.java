@@ -2,9 +2,11 @@ package com.ytgld.chest_vows;
 
 import com.mojang.logging.LogUtils;
 import com.ytgld.chest_vows.config.ChestVowsLanguageProvider;
+import com.ytgld.chest_vows.entity.Entitys;
 import com.ytgld.chest_vows.event.CVEvent;
 import com.ytgld.chest_vows.items.CVItems;
 import com.ytgld.chest_vows.other.CVAttReg;
+import com.ytgld.chest_vows.render.particle.other.MagicParticles;
 import com.ytgld.chest_vows.sounds.CVSounds;
 import com.ytgld.chest_vows.sounds.ChestVowsSoundProvider;
 import net.minecraft.data.DataGenerator;
@@ -27,7 +29,8 @@ public class ChestVows {
         modEventBus.addListener(this::onGatherData);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.fc);
 
-
+        Entitys.REGISTRY.register(modEventBus);
+        MagicParticles.PARTICLE_TYPES.register(modEventBus);
         CVAttReg.ATTACHMENT_TYPES.register(modEventBus);
         CVItems.ITEMS.register(modEventBus);
         CVItems.Tab.CREATIVE_MODE_TABS.register(modEventBus);

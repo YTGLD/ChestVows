@@ -1,8 +1,13 @@
 package com.ytgld.chest_vows;
 
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.ytgld.chest_vows.entity.Entitys;
+import com.ytgld.chest_vows.entity.render.TheSpiritRender;
 import com.ytgld.chest_vows.render.RenderVowItem;
 import com.ytgld.chest_vows.render.VowsRenders;
+import com.ytgld.chest_vows.render.particle.has_opt.CubeParticle;
+import com.ytgld.chest_vows.render.particle.has_opt.MagicChestParticle;
+import com.ytgld.chest_vows.render.particle.other.MagicParticles;
 import net.minecraft.client.renderer.ShaderInstance;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -11,6 +16,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.RegisterShadersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -38,5 +45,13 @@ public class ChestVowsClient {
             exception.printStackTrace();
         }
     }
-
+    @SubscribeEvent
+    public static void RegisterRenderPipelinesEvent(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(Entitys.TheSpirit_.get(), TheSpiritRender::new);
+    }
+    @SubscribeEvent
+    public static void registerFactories(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(MagicParticles.colorOption.get(), MagicChestParticle.Provider::new);
+        event.registerSpriteSet(MagicParticles.colorCube.get(), CubeParticle.Provider::new);
+    }
 }

@@ -6,6 +6,8 @@
     "ComplexComponentsMixin",
     "EvilMotherMixin",
     "ShieldRenderHandlerMixin",
+    "SoulBottleHandlerMixin",
+    "SoulBottleMixin",
     "common.PlayerMixin"
   ],
   "injectors": {
