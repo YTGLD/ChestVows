@@ -6,6 +6,7 @@ import com.ytgld.chest_vows.items.BaseVows;
 import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
 import com.ytgld.chest_vows.items.vows.blood.ChiefPriest;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
+import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -35,6 +36,7 @@ public class CVEvent {
         SwordHolder.event(event);
         BloodArmy.event(event);
         ChiefPriest.event(event);
+        Abandon.event(event);
     }
     @SubscribeEvent
     public void event(LivingHealEvent event){

@@ -2,6 +2,7 @@ package com.ytgld.chest_vows.items;
 
 import com.ytgld.chest_vows.ChestVows;
 import com.ytgld.chest_vows.items.vows.blood.*;
+import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.items.vows.evil.Silence;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -41,6 +42,10 @@ public class CVItems {
             register("silence",(resourceLocation ->
                     new Silence(new Item.Properties().stacksTo(1))));
 
+    public static final DeferredHolder<Item ,Item > Abandon_ =
+            register("abandon",(resourceLocation ->
+                    new Abandon(new Item.Properties().stacksTo(1))));
+
 
 
 
@@ -60,6 +65,7 @@ public class CVItems {
                     output.accept(CVItems.Symbiosis_.get());
                     output.accept(CVItems.ChiefPriest_.get());
                     output.accept(CVItems.Silence_.get());
+                    output.accept(CVItems.Abandon_.get());
 
 
 

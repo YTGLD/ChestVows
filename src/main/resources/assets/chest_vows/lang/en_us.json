@@ -64,6 +64,11 @@
   "item.chest_vows.silence.tool.string.1": "抹去理智值的负面影响",
   "item.chest_vows.silence.tool.string.2": "同时抹去理智值的正面加成",
 
+  "chest_vows.vow.abandon": "“我要将你神魂俱灭！”",
+  "item.chest_vows.abandon": "遗弃者的复仇",
+  "item.chest_vows.abandon.tool.string.1": "攻击施加邪母之拒，若无法施加，则造成%d%%的额外伤害",
+  "item.chest_vows.abandon.tool.string.2": "自身生命值和抗性均永久损失%d%%",
+
   "chest_vows.vow.symbiosis": "四相四侵，粉碎这因果的枷锁",
   "item.chest_vows.symbiosis": "四相共生",
   "item.chest_vows.symbiosis.tool.string.1": "允许在创伤之痕恢复时继续恢复其余护盾",
