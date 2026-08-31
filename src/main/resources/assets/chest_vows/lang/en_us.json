@@ -59,6 +59,10 @@
   "item.chest_vows.chief_priest.tool.string.2": "有%d%%的可能将受到的治疗无效化",
   "item.chest_vows.chief_priest.tool.string.3": "受到伤害时有%d%%的概率使伤害翻倍",
 
+  "chest_vows.vow.silence": "堕落的深渊永不妥协",
+  "item.chest_vows.silence": "静默",
+  "item.chest_vows.silence.tool.string.1": "抹去理智值的负面影响",
+  "item.chest_vows.silence.tool.string.2": "同时抹去理智值的正面加成",
 
   "chest_vows.vow.symbiosis": "四相四侵，粉碎这因果的枷锁",
   "item.chest_vows.symbiosis": "四相共生",

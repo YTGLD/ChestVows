@@ -68,9 +68,9 @@ public class RenderVowItem {
 
     private static void  addBlackLight(GuiGraphics guiGraphics,PoseStack pose, BaseVows baseVows,int x, int y,int seed){
         int a = (int) (itemStackIntegerHashMap.get(baseVows).alpha / 1.5f);
-        int r = 20;
+        int r = 30;
         int g = 0;
-        int b = 10;
+        int b = 15;
         ResourceLocation base = ChestVows.fromNamespaceAndPath(ChestVows.MODID, "textures/gui/all.png");
         float timeBase = time / 75F;
         addCom(32,timeBase,Light.ARGB.color(Math.min(255,a), r, g, b), guiGraphics, pose, base, x, y, seed);
@@ -83,13 +83,6 @@ public class RenderVowItem {
                 ChestVows.fromNamespaceAndPath(ChestVows.MODID, "textures/gui/ci_star.png"), x, y, seed);
         addCom(18,-timeBase * 2  + (float)Math.PI / 8  ,Light.ARGB.color(a, r, g, b), guiGraphics, pose,
                 ChestVows.fromNamespaceAndPath(ChestVows.MODID, "textures/gui/ci_star.png"), x, y, seed);
-
-//        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
-//                guiGraphics, pose,
-//                base, x, y, 0);
-//        addShadow(-timeBase * 2  ,Light.ARGB.color(a, 120, 15, 15),
-//                guiGraphics, pose,
-//                base, x, y, 180);
 
     }
 
@@ -107,31 +100,7 @@ public class RenderVowItem {
         pose.popPose();
         pose.popPose();
     }
-    private static void addShadow(float time , int color, GuiGraphics guiGraphics, PoseStack pose, ResourceLocation fire, int x, int y, int age){
-        float orbSize = 6;
-        pose.pushPose();
-        pose.translate(8,8,1);
-        pose.translate(x, y,1);
-        pose.mulPose(Axis.ZN.rotationDegrees(time * 40 + age));
-        pose.translate(-x, -y,1);
-        for (float theta = 0f; theta <= Math.PI; theta += (float) (Math.PI / 16)) {
-            float xMath = (float) (Math.cos(theta) * 8);
-            float yMath = (float) (Math.sin(theta) * 8);
-            int as = ((color >> 24) & 0xFF);
-            int rs = ((color >> 16) & 0xFF);
-            int gs = ((color >> 8) & 0xFF);
-            int bs = (color & 0xFF);
-            float alpha = (float) Math.pow(Math.sin(theta), 2.5) * 255;
-            int alphaColor = (int) Math.min(as,alpha);
-            int drawColor = Light.ARGB.color(alphaColor,rs,gs,bs);
 
-            new MGuiGraphics.GUI(CIStateShardsHasBlack::getHasBlock,false).blit(guiGraphics, fire,
-                    (int) (x - orbSize / 2f) + xMath, (int) (y - orbSize /2f) + yMath, 0, 0,
-                    orbSize, orbSize, orbSize, orbSize,
-                    drawColor);
-        }
-        pose.popPose();
-    }
     private static class AlphaItem {
         public int alpha;
         public boolean look;
