@@ -1,5 +1,6 @@
 {
-
+  "chest_vows.config.Abandon": "额外伤害",
+  "chest_vows.config.Abandon2": "自身生命值和抗性的惩罚",
   "chest_vows.config.BloodArmy": "生命值恢复加成",
   "chest_vows.config.BloodArmy2": "每隔多少秒恢复2点生命值",
   "chest_vows.config.BloodArmy3": "受伤后的治疗暂停时间",
@@ -8,11 +9,15 @@
   "chest_vows.config.ChiefPriest": "抗性和生命值的奖励",
   "chest_vows.config.ChiefPriest2": "治疗失败的概率",
   "chest_vows.config.ChiefPriest3": "受到伤害翻倍的概率",
+  "chest_vows.config.MutualSupport": "护盾奖励",
+  "chest_vows.config.MutualSupport2": "生命值和护甲值的惩罚",
   "chest_vows.config.SwordHolder": "触发多段连斩的概率",
   "chest_vows.config.SwordHolder2": "触发横扫的概率",
   "chest_vows.config.SwordHolder3": "剑类武器造成的伤害惩罚",
   "chest_vows.config.Symbiosis": "除创伤之痕外的护盾恢复速度降低的值",
   "chest_vows.config.Symbiosis2": "创伤之痕每隔多少秒恢复 2 点",
+  "chest_vows.configuration.Abandon": "遗弃者的复仇",
+  "chest_vows.configuration.Abandon2": "遗弃者的复仇2",
   "chest_vows.configuration.BloodArmy": "破望血军",
   "chest_vows.configuration.BloodArmy2": "破望血军2",
   "chest_vows.configuration.BloodArmy3": "破望血军3",
@@ -21,6 +26,8 @@
   "chest_vows.configuration.ChiefPriest": "混沌祭司长",
   "chest_vows.configuration.ChiefPriest2": "混沌祭司长2",
   "chest_vows.configuration.ChiefPriest3": "混沌祭司长3",
+  "chest_vows.configuration.MutualSupport": "互持",
+  "chest_vows.configuration.MutualSupport2": "互持2",
   "chest_vows.configuration.SwordHolder": "魔族持剑者",
   "chest_vows.configuration.SwordHolder2": "魔族持剑者2",
   "chest_vows.configuration.SwordHolder3": "魔族持剑者3",
@@ -40,6 +47,10 @@
   "chest_vows.configuration.BloodVow": "血之誓令",
   "chest_vows.configuration.BloodVow.tooltip": "血之誓令",
   "chest_vows.configuration.BloodVow.button": "血之誓令",
+
+  "chest_vows.configuration.EvilVow": "邪母誓令",
+  "chest_vows.configuration.EvilVow.tooltip": "邪母誓令",
+  "chest_vows.configuration.EvilVow.button": "邪母誓令",
 
   "chest_vows.vow.sword_holder": "违命者，斩！",
   "item.chest_vows.sword_holder": "魔族持剑者",
@@ -68,6 +79,12 @@
   "item.chest_vows.abandon": "遗弃者的复仇",
   "item.chest_vows.abandon.tool.string.1": "攻击施加邪母之拒，若无法施加，则造成%d%%的额外伤害",
   "item.chest_vows.abandon.tool.string.2": "自身生命值和抗性均永久损失%d%%",
+
+  "chest_vows.vow.mutual_support": "邪母的第二诅咒",
+  "item.chest_vows.mutual_support": "互持",
+  "item.chest_vows.mutual_support.tool.string.1": "治疗时同时治愈护盾",
+  "item.chest_vows.mutual_support.tool.string.2": "所有护盾的最大值增加%d%%",
+  "item.chest_vows.mutual_support.tool.string.3": "自身生命值和护甲值均减少%d%%",
 
   "chest_vows.vow.symbiosis": "四相四侵，粉碎这因果的枷锁",
   "item.chest_vows.symbiosis": "四相共生",

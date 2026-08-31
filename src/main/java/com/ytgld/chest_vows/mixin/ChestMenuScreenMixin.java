@@ -39,12 +39,13 @@ public abstract class ChestMenuScreenMixin extends AbstractContainerScreen<Chest
             i++;
             int guiLeft = (this.width - this.imageWidth) / 2 + 16 * (i - 1);
             int guiTop = (this.height - this.imageHeight) / 2 - 16;
-            guiGraphics.renderItem(BuiltInRegistries.ITEM.get(ResourceLocation.parse(string)).getDefaultInstance(),
-                    guiLeft, guiTop);
+
             int appleSize = 16;
             if (mouseX >= guiLeft && mouseX < guiLeft + appleSize && mouseY >= guiTop && mouseY < guiTop + appleSize) {
                 guiGraphics.renderTooltip(this.font, BuiltInRegistries.ITEM.get(ResourceLocation.parse(string)).getDefaultInstance(), mouseX, mouseY);
             }
+            guiGraphics.renderItem(BuiltInRegistries.ITEM.get(ResourceLocation.parse(string)).getDefaultInstance(),
+                    guiLeft, guiTop);
         }
     }
     @Inject(method = "render", at = @At(value = "RETURN"))

@@ -7,6 +7,7 @@ import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
 import com.ytgld.chest_vows.items.vows.blood.ChiefPriest;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.items.vows.evil.Abandon;
+import com.ytgld.chest_vows.items.vows.evil.MutualSupport;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -42,6 +43,7 @@ public class CVEvent {
     public void event(LivingHealEvent event){
         BloodArmy.event(event);
         ChiefPriest.event(event);
+        MutualSupport.event(event);
     }
     @SubscribeEvent
     public void event(SweepAttackEvent event){

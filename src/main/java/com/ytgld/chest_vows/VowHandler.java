@@ -39,7 +39,7 @@ public class VowHandler {
         return strings.add(itemName);
     }
     public static int getMaxVows(Player player){
-        return 10;
+        return 3;
     }
 
     public static Item getVowsItemForName(String itemName){

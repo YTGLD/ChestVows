@@ -1,0 +1,19 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    {"item":"chest_item:soul_bottle"},
+
+    {"item":"chest_item:corruption_crystal"},
+    {"item":"chest_item:brass_coins"},
+    {"item":"chest_item:devil_coins"},
+    {"item":"chest_item:mother_remains"}
+
+  ],
+  "soul_cost": {
+    "chest_item:death_soul": 12,
+    "chest_item:spirit_soul": 8
+  },
+  "result": "chest_vows:mutual_support",
+  "id": "chest_vows:mutual_support",
+  "count": 1
+}
