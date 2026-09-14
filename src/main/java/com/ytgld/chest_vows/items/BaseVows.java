@@ -73,6 +73,9 @@ public abstract class BaseVows extends Item {
     public void tickVows(Player entity){
 
     }
+    public boolean showAttribute(){
+        return false;
+    }
 
     public Multimap<Holder<Attribute>, AttributeModifier> doAttribute(LivingEntity livingEntity,Item item){
         return HashMultimap.create();
@@ -98,5 +101,6 @@ public abstract class BaseVows extends Item {
     public final void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
         builder.accept(textMain().copy().withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+        builder.accept(Component.translatable("chest_vows.vows.use").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
     }
 }

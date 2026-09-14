@@ -1,6 +1,7 @@
 package com.ytgld.chest_vows.event;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.items.BaseVows;
 import com.ytgld.chest_vows.items.vows.blood.BloodArmy;
@@ -9,10 +10,14 @@ import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.items.vows.evil.MutualSupport;
 import com.ytgld.chest_vows.items.vows.hyperplasia.Trauma;
+import com.ytgld.chest_vows.items.vows.hyperplasia.CtrlMagic;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -23,8 +28,8 @@ import net.neoforged.neoforge.common.util.AttributeUtil;
 import net.neoforged.neoforge.event.AddAttributeTooltipsEvent;
 import net.neoforged.neoforge.event.GatherSkippedAttributeTooltipsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
@@ -41,12 +46,17 @@ public class CVEvent {
         ChiefPriest.event(event);
         Abandon.event(event);
         Trauma.event(event);
+        CtrlMagic.event(event);
     }
     @SubscribeEvent
     public void event(LivingHealEvent event){
         BloodArmy.event(event);
         ChiefPriest.event(event);
         MutualSupport.event(event);
+    }
+    @SubscribeEvent
+    public void event(AttackEntityEvent event){
+        CtrlMagic.event(event);
     }
     @SubscribeEvent
     public void event(SweepAttackEvent event){
@@ -81,10 +91,14 @@ public class CVEvent {
                 evt.addTooltipLines(Component.empty());
                 attributesTooltip.add(Component.translatable("chest_vows.vows.attribute").
                         withStyle(ChatFormatting.GOLD));
+                Multimap<Holder<Attribute>, AttributeModifier> attributeModifierMultimap = HashMultimap.create();
+                if (baseVows.showAttribute()) {
+                    attributeModifierMultimap = baseVows.doAttribute(player,baseVows);
+                }
                 AttributeUtil.applyTextFor(
                         stack,
                         attributesTooltip::add,
-                        HashMultimap.create(),
+                        attributeModifierMultimap,
                         AttributeTooltipContext.of(player, context,context.tooltipDisplay(),context.flag()));
                 baseVows.applyText(baseVows.getDefaultInstance(),attributesTooltip,evt.getContext().flag());
                 for (Component component : attributesTooltip) {

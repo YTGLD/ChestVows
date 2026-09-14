@@ -41,6 +41,7 @@
   "chest_vows.vows.max": "你已宣告太多的誓言",
   "chest_vows.vows.off": "你已解除相关誓约",
   "chest_vows.vows.cannot.off": "相关誓约并不存在",
+  "chest_vows.vows.use": "右键使用",
 
   "sound.chest_vows.use_vows": "誓令：进行绑定",
   "sound.chest_vows.soul_create":"灵魂：产生",

@@ -6,6 +6,8 @@ import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.items.vows.evil.MutualSupport;
 import com.ytgld.chest_vows.items.vows.evil.Silence;
 import com.ytgld.chest_vows.items.vows.hyperplasia.Trauma;
+import com.ytgld.chest_vows.items.vows.hyperplasia.CtrlMagic;
+import com.ytgld.chest_vows.items.vows.hyperplasia.PainSoul;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -57,6 +59,12 @@ public class CVItems {
             register("trauma",(resourceLocation ->
                     new Trauma(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
 
+    public static final DeferredHolder<Item ,Item > CtrlMagic_ =
+            register("ctrl_magic",(resourceLocation ->
+                    new CtrlMagic(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
+    public static final DeferredHolder<Item ,Item > PainSoul_ =
+            register("pain_soul",(resourceLocation ->
+                    new PainSoul(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
 
 
 
@@ -78,6 +86,8 @@ public class CVItems {
                     output.accept(CVItems.Abandon_.get());
                     output.accept(CVItems.MutualSupport_.get());
                     output.accept(CVItems.Trauma_.get());
+                    output.accept(CVItems.CtrlMagic_.get());
+                    output.accept(CVItems.PainSoul_.get());
 
 
 
