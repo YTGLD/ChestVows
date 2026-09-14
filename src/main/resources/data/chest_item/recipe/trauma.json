@@ -1,0 +1,19 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:god_apple",
+    "chest_item:space",
+    "chest_item:complete",
+    "minecraft:golden_apple"
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 32,
+    "chest_item:death_soul": 16,
+    "chest_item:celestial_soul": 8
+  },
+  "result": "chest_vows:trauma",
+  "id": "chest_vows:trauma",
+  "count": 1
+}

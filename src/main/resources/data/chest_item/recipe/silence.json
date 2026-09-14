@@ -1,0 +1,18 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:mother_remains",
+    "chest_item:mother_remains",
+    "chest_item:fission"
+
+  ],
+  "soul_cost": {
+    "chest_item:death_soul": 12,
+    "chest_item:spirit_soul": 12
+  },
+  "result": "chest_vows:silence",
+  "id": "chest_vows:silence",
+  "count": 1
+}

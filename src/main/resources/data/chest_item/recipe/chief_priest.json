@@ -1,0 +1,17 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+    "chest_item:nine_dome",
+    "chest_item:chaos",
+    "minecraft:shield"
+
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 12,
+    "chest_item:spirit_soul": 12
+  },
+  "result": "chest_vows:chief_priest",
+  "id": "chest_vows:chief_priest",
+  "count": 1
+}

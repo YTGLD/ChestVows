@@ -1,0 +1,20 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "minecraft:lapis_block",
+    "chest_item:fission_emblem",
+    "minecraft:ominous_bottle",
+    "minecraft:iron_sword"
+
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 16,
+    "chest_item:spirit_soul": 12,
+    "chest_item:celestial_soul": 8
+  },
+  "result": "chest_vows:sword_holder",
+  "id": "chest_vows:sword_holder",
+  "count": 1
+}
