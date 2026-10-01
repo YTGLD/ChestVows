@@ -1,0 +1,20 @@
+{
+  "type": "chest_item:soul_crafting",
+
+  "ingredients": [
+    "chest_item:soul_bottle",
+    "chest_item:bone_head",
+    "chest_item:knife",
+    "chest_item:pain_rune",
+    "minecraft:ender_eye"
+  ],
+
+  "soul_cost": {
+    "chest_item:death_soul": 16,
+    "chest_item:spirit_soul": 8,
+    "chest_item:celestial_soul": 8
+  },
+  "result": "chest_vows:abandon",
+  "id": "chest_vows:abandon",
+  "count": 1
+}

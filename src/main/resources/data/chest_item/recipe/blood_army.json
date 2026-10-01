@@ -1,0 +1,19 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:drug_heal",
+    "chest_item:life_crystal",
+    "minecraft:heart_of_the_sea",
+    "minecraft:diamond"
+
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 8,
+    "chest_item:magic_soul": 8
+  },
+  "result": "chest_vows:blood_army",
+  "id": "chest_vows:blood_army",
+  "count": 1
+}

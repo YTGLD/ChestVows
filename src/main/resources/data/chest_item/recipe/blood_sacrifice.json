@@ -1,0 +1,19 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:god_apple",
+    "chest_item:giant_heart",
+    "minecraft:golden_apple",
+    "minecraft:rotten_flesh"
+
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 16,
+    "chest_item:spirit_soul": 8
+  },
+  "result": "chest_vows:blood_sacrifice",
+  "id": "chest_vows:blood_sacrifice",
+  "count": 1
+}
