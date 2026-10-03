@@ -1,4 +1,5 @@
 {
+
   "chest_vows.config.Abandon": "额外伤害",
   "chest_vows.config.Abandon2": "自身生命值和抗性的惩罚",
   "chest_vows.config.BloodArmy": "生命值恢复加成",
@@ -9,13 +10,21 @@
   "chest_vows.config.ChiefPriest": "抗性和生命值的奖励",
   "chest_vows.config.ChiefPriest2": "治疗失败的概率",
   "chest_vows.config.ChiefPriest3": "受到伤害翻倍的概率",
+  "chest_vows.config.CtrlMagic": "魔法伤害加成",
+  "chest_vows.config.CtrlMagic2": "魔法转换",
+  "chest_vows.config.InnerDemon": "杀死生物生命值增加的基值，但是会随增加而衰减",
+  "chest_vows.config.InnerDemon2": "生命值每次最多恢复的值",
   "chest_vows.config.MutualSupport": "护盾奖励",
   "chest_vows.config.MutualSupport2": "生命值和护甲值的惩罚",
+  "chest_vows.config.PainSoul": "生命值惩罚",
   "chest_vows.config.SwordHolder": "触发多段连斩的概率",
   "chest_vows.config.SwordHolder2": "触发横扫的概率",
   "chest_vows.config.SwordHolder3": "剑类武器造成的伤害惩罚",
   "chest_vows.config.Symbiosis": "除创伤之痕外的护盾恢复速度降低的值",
   "chest_vows.config.Symbiosis2": "创伤之痕每隔多少秒恢复 2 点",
+  "chest_vows.config.Trauma": "最多受到的伤害",
+  "chest_vows.config.Trauma2": "多少秒内扣除",
+  "chest_vows.config.WeightyWind": "速度上限",
   "chest_vows.configuration.Abandon": "遗弃者的复仇",
   "chest_vows.configuration.Abandon2": "遗弃者的复仇2",
   "chest_vows.configuration.BloodArmy": "破望血军",
@@ -26,13 +35,21 @@
   "chest_vows.configuration.ChiefPriest": "混沌祭司长",
   "chest_vows.configuration.ChiefPriest2": "混沌祭司长2",
   "chest_vows.configuration.ChiefPriest3": "混沌祭司长3",
+  "chest_vows.configuration.CtrlMagic": "魔法掌控",
+  "chest_vows.configuration.CtrlMagic2": "魔法掌控2",
+  "chest_vows.configuration.InnerDemon": "心魔",
+  "chest_vows.configuration.InnerDemon2": "心魔2",
   "chest_vows.configuration.MutualSupport": "互持",
   "chest_vows.configuration.MutualSupport2": "互持2",
+  "chest_vows.configuration.PainSoul": "苦痛誓约",
   "chest_vows.configuration.SwordHolder": "魔族持剑者",
   "chest_vows.configuration.SwordHolder2": "魔族持剑者2",
   "chest_vows.configuration.SwordHolder3": "魔族持剑者3",
   "chest_vows.configuration.Symbiosis": "四相共生",
   "chest_vows.configuration.Symbiosis2": "四相共生2",
+  "chest_vows.configuration.Trauma": "创伤的复仇",
+  "chest_vows.configuration.Trauma2": "创伤的复仇2",
+  "chest_vows.configuration.WeightyWind": "沉重之风",
 
   "chest_vows.tab": "Trinkets of the Chest — Vows",
   "chest_vows.vows": "Vows",
@@ -105,74 +122,67 @@
   "item.chest_vows.symbiosis.tool.string.3": "Trauma's Mark can no longer consume shields",
   "item.chest_vows.symbiosis.tool.string.4": "Reduces the regeneration speed of all shields except Trauma's Mark by 50%",
 
+  "chest_vows.vow.pain_soul": "Those who obey me shall prosper; those who defy me shall perish",
+  "item.chest_vows.pain_soul": "Agony of Endless Proliferation",
+  "item.chest_vows.pain_soul.1": "All shield capacity scales with health modifiers",
+  "item.chest_vows.pain_soul.3": "Maximum health reduced by %d%%",
+  "item.chest_vows.pain_soul.4": "All shield capacity may be reduced as health modifiers change",
 
-  "chest_vows.vow.pain_soul": "顺我者昌，逆我者亡",
-  "item.chest_vows.pain_soul": "无止增生之苦",
-  "item.chest_vows.pain_soul.1": "所有护盾容量随生命修正而增长",
-  "item.chest_vows.pain_soul.3": "最大生命值降低%d%%",
-  "item.chest_vows.pain_soul.4": "所有护盾容量可随生命修正变化而减少",
-
-
-  "chest_vows.vow.ctrl_magic": "大局已定",
-  "item.chest_vows.ctrl_magic": "魔法掌控",
-  "item.chest_vows.ctrl_magic.1": "造成的魔法类型伤害提高%d%%",
-  "item.chest_vows.ctrl_magic.2": "将造成物理伤害的%d%%转换成魔法类型",
-  "item.chest_vows.ctrl_magic.3": "对穿透伤害的敏感度显著提高",
+  "chest_vows.vow.ctrl_magic": "The Outcome is Sealed",
+  "item.chest_vows.ctrl_magic": "Arcane Mastery",
+  "item.chest_vows.ctrl_magic.1": "Magic-type damage dealt increased by %d%%",
+  "item.chest_vows.ctrl_magic.2": "Converts %d%% of physical damage dealt into magic-type",
+  "item.chest_vows.ctrl_magic.3": "Significantly increased vulnerability to piercing damage",
 
   "chest_vows.vow.blood_sacrifice": "Blood of the Heavens, Drink and Become Immortal",
   "item.chest_vows.blood_sacrifice": "Blood Sacrifice",
   "item.chest_vows.blood_sacrifice.tool.string.1": "Increases the maximum value of Scar Tissue by %d%% and causes it to absorb all damage",
   "item.chest_vows.blood_sacrifice.tool.string.2": "Increases the cooldown generated when Scar Tissue is eradicated by %d%%",
 
-  "chest_vows.book.silence.main": "堕落的深渊之眼",
-  "chest_vows.book.silence.text": "堕落的深渊将永远无法根除\n它永不妥协...\n\n若宣誓誓令，邪母的侵蚀将就此停止\n但代价是彻底切断邪母的联系\n使你无法获得它的馈赠\n\n“这便是永恒的代价”",
+  "chest_vows.book.silence.main": "The Fallen Eye of the Abyss",
+  "chest_vows.book.silence.text": "The fallen abyss can never be eradicated.\nIt will never yield...\n\nIf you swear this vow, the Mother of Evil's corruption shall cease.\nBut the price is severing all ties with her,\nleaving you unable to receive her boons.\n\n\"Such is the eternal price.\"",
 
-  "chest_vows.book.mutual_support.main": "互持",
-  "chest_vows.book.mutual_support.text": "邪母的印记无法抹除\n这便是邪母的诅咒\n\n若宣誓誓令，护盾随治疗而增加\n但此效果需要献祭大量的生命和护甲\n\n“邪母到底是谁？”",
+  "chest_vows.book.mutual_support.main": "Mutual Support",
+  "chest_vows.book.mutual_support.text": "The Mark of the Mother of Evil cannot be erased.\nThis is her curse.\n\nIf you swear this vow, shields increase with healing.\nBut this effect demands a great sacrifice of health and armor.\n\n\"Who, truly, is the Mother of Evil?\"",
 
-  "chest_vows.book.trauma.main": "遗弃的创伤",
-  "chest_vows.book.trauma.text": "这方痛楚将永世不朽\n永生永世，万古不灭...\n\n若宣誓誓令，受到的伤害会在余下一段时间回馈\n且受到伤害被限制\n代价则是减少治疗效果\n\n“将这份痛楚带入轮回..永世为仇恨而战”",
+  "chest_vows.book.trauma.main": "Abandoned Wounds",
+  "chest_vows.book.trauma.text": "This pain shall be eternal.\nFor all ages, forever unending...\n\nIf you swear this vow, damage taken will be returned over time,\nand incoming damage is capped.\nThe cost is reduced healing effectiveness.\n\n\"Carry this torment into reincarnation... fight for hatred for all eternity.\"",
 
-  "chest_vows.book.ctrl_magic.main": "魔法的掌舵人",
-  "chest_vows.book.ctrl_magic.text": "这魔力的存在\n即是变数...\n\n魔法伤害提高且将物理伤害转换\n但对魔法或穿透伤害极为抵触\n\n“此局...无解”",
+  "chest_vows.book.ctrl_magic.main": "The Helm of Magic",
+  "chest_vows.book.ctrl_magic.text": "The existence of this arcane power\nis the variable...\n\nMagic damage is increased and physical damage is converted,\nbut you become highly vulnerable to magic and piercing damage.\n\n\"This game... has no solution.\"",
 
-  "chest_vows.book.pain_soul.main": "自我增生的疮疤",
-  "chest_vows.book.pain_soul.text": "顺者昌，逆则亡\n\n护盾随生命值的增加而增加\n但生命减少且护盾会随生命上限而减少\n\n“血雨已落，属于他的时代...结束了”",
+  "chest_vows.book.pain_soul.main": "Self-Proliferating Scars",
+  "chest_vows.book.pain_soul.text": "Obey and prosper; defy and perish.\n\nShields increase with maximum health,\nbut health is reduced and shields decrease alongside your health cap.\n\n\"The blood rain has fallen. His era... is over.\"",
 
-  "chest_vows.book.abandon.main": "被掩埋的仇恨",
-  "chest_vows.book.abandon.text": "他日灭我满门\n今日便将你碎尸万段！\n\n若宣誓誓令，每次攻击都会施加邪母的诅咒\n但自身的部分生命必须献祭给邪母\n\n“邪母啊，请给我力量....”",
+  "chest_vows.book.abandon.main": "Buried Hatred",
+  "chest_vows.book.abandon.text": "One day you wiped out my entire clan.\nToday I shall tear you to pieces!\n\nIf you swear this vow, every attack applies the Mother of Evil's curse.\nBut a portion of your own life must be sacrificed to her.\n\n\"O Mother of Evil, grant me power....\"",
 
-  "chest_vows.book.blood_sacrifice.main": "血祭",
-  "chest_vows.book.blood_sacrifice.text": "饮天之血，可得长生\n疮疤组织得到大量强化且吸收所有伤害\n疮疤组织在被根除后冷却更长\n\n“献祭已成，无可挽回”",
+  "chest_vows.book.blood_sacrifice.main": "Blood Sacrifice",
+  "chest_vows.book.blood_sacrifice.text": "Drink the blood of the heavens and attain immortality.\nScar Tissue is greatly enhanced and absorbs all damage,\nbut its cooldown is significantly longer after being eradicated.\n\n\"The sacrifice is made. There is no turning back.\"",
 
+  "chest_vows.book.sword_holder.main": "The Demonic Swordbearer",
+  "chest_vows.book.sword_holder.text": "Those who defy heaven's will shall be slain!\n\nAttacks with a sword may trigger multi-hit combos and have a higher chance to sweep.\nAfter swearing this vow, damage dealt with non-sword weapons is reduced.\n\n\"I am no demon. I am simply unyielding.\"",
 
-  "chest_vows.book.sword_holder.main": "魔族持剑者",
-  "chest_vows.book.sword_holder.text": "违抗天命者，斩！\n\n持剑攻击时有可能触发多段连斩，以及概率更高的横扫\n宣誓此誓言后除剑以外的武器造成的伤害都会减少\n\n“吾不是魔，只是不可违逆”",
+  "chest_vows.book.blood_army.main": "The Blood Legion of Broken Hope",
+  "chest_vows.book.blood_army.text": "Only attack, never defend. To defend is to cease being the Blood Legion.\n\nHealth regeneration is greatly increased, with natural recovery every two seconds.\nAfter swearing this vow, taking any damage prevents healing for five seconds\nbefore recovery can resume.\n\n\"I want to live.\"",
 
+  "chest_vows.book.symbiosis.main": "Fourfold Symbiosis",
+  "chest_vows.book.symbiosis.text": "Four aspects, four invasions—shatter the shackles of causality.\n\nWhile Scar Marks recover, the other four shields also recover.\nScar Marks regenerate only over time and no longer absorb other shields' recovery.\nRecovery time for shields other than Scar Marks is extended.",
 
-  "chest_vows.book.blood_army.main": "破望血军",
-  "chest_vows.book.blood_army.text": "只可攻，不可守，若是守就不再是破望血军了\n\n大幅度提高生命值恢复能力，每隔两秒进行一次自然恢复\n宣誓此誓言后受到攻击将无法获得治疗要过五秒正空期才能再次恢复\n\n“我想活下去”",
+  "chest_vows.book.chief_priest.main": "High Priest of Chaos",
+  "chest_vows.book.chief_priest.text": "Born toward death, cursed by causality.\n\nHealth and resistances are significantly increased,\nbut there is a small chance for incoming damage to double\nand a small chance for healing to fail entirely.\n\n\"Undeath is stagnation. That is good... that is good.\"",
 
+  "chest_vows.vow.weighty_wind": "Roar—the roar that tears through the heavens",
+  "item.chest_vows.weighty_wind": "Weighty Wind",
+  "item.chest_vows.weighty_wind.1": "Cannot be knocked back while moving",
+  "item.chest_vows.weighty_wind.2": "Movement speed is fixed at %d%% of the default value",
+  "chest_vows.book.weighty_wind.main": "Weighty Wind",
+  "chest_vows.book.weighty_wind.text": "A hurricane roaring against injustice.\n\nAfter swearing this vow, you cannot be knocked back while moving,\nbut your movement speed is fixed.",
 
-  "chest_vows.book.symbiosis.main": "四相共生",
-  "chest_vows.book.symbiosis.text": "四相四侵，粉碎这因果的枷锁\n\n让创伤之痕恢复之余恢复其他四种护盾，创伤之痕只需随时间恢复，不在吸收其他护盾恢复\n除创伤之痕外的护盾恢复时间拉长",
-
-
-
-  "chest_vows.book.chief_priest.main": "混沌祭祀长",
-  "chest_vows.book.chief_priest.text": "向死而生，因果的诅咒\n\n生命值与抗性获得较大提升\n但有小概率使受到的伤害翻倍，以及小概率无法受到治疗效果\n\n“不死为僵，是好...是好”",
-
-  "chest_vows.vow.weighty_wind": "咆哮吧，这撕裂长空的咆哮",
-  "item.chest_vows.weighty_wind":"沉重之风",
-  "item.chest_vows.weighty_wind.1": "移动时不会被击退",
-  "item.chest_vows.weighty_wind.2": "移动速度固定为默认值的%d%%",
-  "chest_vows.book.weighty_wind.main": "沉重之风",
-  "chest_vows.book.weighty_wind.text": "怒吼着不公的飓风\n\n宣誓后，移动时不会被击退\n但移动速度被固定",
-
-  "chest_vows.vow.inner_demon": "这心脏充斥着无尽的魔力",
-  "item.chest_vows.inner_demon":"心魔",
-  "item.chest_vows.inner_demon.1": "生命值随击杀生物逐渐提高",
-  "item.chest_vows.inner_demon.2": "生命值每次最多只能恢复%d点",
-  "chest_vows.book.inner_demon.main": "第二面",
-  "chest_vows.book.inner_demon.text": "心魔化形，它是你的黑暗面\n\n宣誓后，生命值随杀戮的增加而增加\n但生命值每次最多只能恢复一定的值\n\n“要么被心魔控制\n要么与其融为一体....”"
+  "chest_vows.vow.inner_demon": "This heart brims with endless arcane power",
+  "item.chest_vows.inner_demon": "Inner Demon",
+  "item.chest_vows.inner_demon.1": "Maximum health gradually increases with each creature killed",
+  "item.chest_vows.inner_demon.2": "Each heal can restore at most %d health",
+  "chest_vows.book.inner_demon.main": "The Other Face",
+  "chest_vows.book.inner_demon.text": "The Inner Demon takes form—it is your dark side.\n\nAfter swearing this vow, your health grows with each kill,\nbut each heal is capped at a fixed amount.\n\n\"Either be controlled by the Inner Demon,\nor merge with it....\""
 }

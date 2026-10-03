@@ -48,6 +48,7 @@ public class CVEvent {
     public void eventLow(LivingDamageEvent.Pre event){
         Trauma.event(event);
     }
+
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void eventLow(LivingHealEvent event){
         InnerDemon.event(event);

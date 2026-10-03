@@ -11,6 +11,8 @@
   "chest_vows.config.ChiefPriest3": "受到伤害翻倍的概率",
   "chest_vows.config.CtrlMagic": "魔法伤害加成",
   "chest_vows.config.CtrlMagic2": "魔法转换",
+  "chest_vows.config.InnerDemon": "杀死生物生命值增加的基值，但是会随增加而衰减",
+  "chest_vows.config.InnerDemon2": "生命值每次最多恢复的值",
   "chest_vows.config.MutualSupport": "护盾奖励",
   "chest_vows.config.MutualSupport2": "生命值和护甲值的惩罚",
   "chest_vows.config.PainSoul": "生命值惩罚",
@@ -21,6 +23,7 @@
   "chest_vows.config.Symbiosis2": "创伤之痕每隔多少秒恢复 2 点",
   "chest_vows.config.Trauma": "最多受到的伤害",
   "chest_vows.config.Trauma2": "多少秒内扣除",
+  "chest_vows.config.WeightyWind": "速度上限",
   "chest_vows.configuration.Abandon": "遗弃者的复仇",
   "chest_vows.configuration.Abandon2": "遗弃者的复仇2",
   "chest_vows.configuration.BloodArmy": "破望血军",
@@ -33,6 +36,8 @@
   "chest_vows.configuration.ChiefPriest3": "混沌祭司长3",
   "chest_vows.configuration.CtrlMagic": "魔法掌控",
   "chest_vows.configuration.CtrlMagic2": "魔法掌控2",
+  "chest_vows.configuration.InnerDemon": "心魔",
+  "chest_vows.configuration.InnerDemon2": "心魔2",
   "chest_vows.configuration.MutualSupport": "互持",
   "chest_vows.configuration.MutualSupport2": "互持2",
   "chest_vows.configuration.PainSoul": "苦痛誓约",
@@ -42,5 +47,6 @@
   "chest_vows.configuration.Symbiosis": "四相共生",
   "chest_vows.configuration.Symbiosis2": "四相共生2",
   "chest_vows.configuration.Trauma": "创伤的复仇",
-  "chest_vows.configuration.Trauma2": "创伤的复仇2"
+  "chest_vows.configuration.Trauma2": "创伤的复仇2",
+  "chest_vows.configuration.WeightyWind": "沉重之风"
 }
