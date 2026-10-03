@@ -5,9 +5,11 @@ import com.ytgld.chest_vows.items.vows.blood.*;
 import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.items.vows.evil.MutualSupport;
 import com.ytgld.chest_vows.items.vows.evil.Silence;
+import com.ytgld.chest_vows.items.vows.hyperplasia.InnerDemon;
 import com.ytgld.chest_vows.items.vows.hyperplasia.Trauma;
 import com.ytgld.chest_vows.items.vows.hyperplasia.CtrlMagic;
 import com.ytgld.chest_vows.items.vows.hyperplasia.PainSoul;
+import com.ytgld.chest_vows.items.vows.wind.WeightyWind;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -66,6 +68,13 @@ public class CVItems {
             register("pain_soul",(resourceLocation ->
                     new PainSoul(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
 
+    public static final DeferredHolder<Item ,Item > InnerDemon_ =
+            register("inner_demon",(resourceLocation ->
+                    new InnerDemon(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
+
+    public static final DeferredHolder<Item ,Item > WeightyWind_ =
+            register("weighty_wind",(resourceLocation ->
+                    new WeightyWind(new Item.Properties().stacksTo(1).setId(ResourceKey.create(Registries.ITEM,resourceLocation)))));
 
 
 
@@ -88,6 +97,8 @@ public class CVItems {
                     output.accept(CVItems.Trauma_.get());
                     output.accept(CVItems.CtrlMagic_.get());
                     output.accept(CVItems.PainSoul_.get());
+                    output.accept(CVItems.InnerDemon_.get());
+                    output.accept(CVItems.WeightyWind_.get());
 
 
 

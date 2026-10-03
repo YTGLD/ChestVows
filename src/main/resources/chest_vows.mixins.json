@@ -3,11 +3,14 @@
   "package": "com.ytgld.chest_vows.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ChestSlotMixin",
     "ComplexComponentsMixin",
+    "EventMainMixin",
     "EvilMotherMixin",
     "ShieldRenderHandlerMixin",
     "SoulBottleHandlerMixin",
     "SoulBottleMixin",
+    "common.AttributeInstanceMixin",
     "common.PlayerMixin"
   ],
   "injectors": {
@@ -18,6 +21,7 @@
   },
   "client": [
     "ChestMenuScreenMixin",
+    "client.ChaosBookScreenMixin",
     "client.GuiGraphicsMixin"
   ]
 }

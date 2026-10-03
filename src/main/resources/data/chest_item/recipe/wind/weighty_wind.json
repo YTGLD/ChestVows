@@ -1,0 +1,17 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "minecraft:heavy_core",
+    "chest_item:sword",
+    "minecraft:lapis_block"
+  ],
+  "soul_cost": {
+    "chest_item:magic_soul": 16,
+    "chest_item:spirit_soul": 16
+  },
+  "result": "chest_vows:weighty_wind",
+  "id": "chest_vows:weighty_wind",
+  "count": 1
+}

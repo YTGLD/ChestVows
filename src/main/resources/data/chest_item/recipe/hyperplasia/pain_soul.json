@@ -1,0 +1,18 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:self_increasing_heart",
+    "chest_item:scar_heart",
+    "chest_item:abnormal",
+    "minecraft:golden_apple"
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 32,
+    "chest_item:magic_soul": 16
+  },
+  "result": "chest_vows:pain_soul",
+  "id": "chest_vows:pain_soul",
+  "count": 1
+}

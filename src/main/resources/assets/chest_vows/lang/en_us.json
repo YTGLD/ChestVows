@@ -122,6 +122,57 @@
   "chest_vows.vow.blood_sacrifice": "Blood of the Heavens, Drink and Become Immortal",
   "item.chest_vows.blood_sacrifice": "Blood Sacrifice",
   "item.chest_vows.blood_sacrifice.tool.string.1": "Increases the maximum value of Scar Tissue by %d%% and causes it to absorb all damage",
-  "item.chest_vows.blood_sacrifice.tool.string.2": "Increases the cooldown generated when Scar Tissue is eradicated by %d%%"
+  "item.chest_vows.blood_sacrifice.tool.string.2": "Increases the cooldown generated when Scar Tissue is eradicated by %d%%",
 
+  "chest_vows.book.silence.main": "堕落的深渊之眼",
+  "chest_vows.book.silence.text": "堕落的深渊将永远无法根除\n它永不妥协...\n\n若宣誓誓令，邪母的侵蚀将就此停止\n但代价是彻底切断邪母的联系\n使你无法获得它的馈赠\n\n“这便是永恒的代价”",
+
+  "chest_vows.book.mutual_support.main": "互持",
+  "chest_vows.book.mutual_support.text": "邪母的印记无法抹除\n这便是邪母的诅咒\n\n若宣誓誓令，护盾随治疗而增加\n但此效果需要献祭大量的生命和护甲\n\n“邪母到底是谁？”",
+
+  "chest_vows.book.trauma.main": "遗弃的创伤",
+  "chest_vows.book.trauma.text": "这方痛楚将永世不朽\n永生永世，万古不灭...\n\n若宣誓誓令，受到的伤害会在余下一段时间回馈\n且受到伤害被限制\n代价则是减少治疗效果\n\n“将这份痛楚带入轮回..永世为仇恨而战”",
+
+  "chest_vows.book.ctrl_magic.main": "魔法的掌舵人",
+  "chest_vows.book.ctrl_magic.text": "这魔力的存在\n即是变数...\n\n魔法伤害提高且将物理伤害转换\n但对魔法或穿透伤害极为抵触\n\n“此局...无解”",
+
+  "chest_vows.book.pain_soul.main": "自我增生的疮疤",
+  "chest_vows.book.pain_soul.text": "顺者昌，逆则亡\n\n护盾随生命值的增加而增加\n但生命减少且护盾会随生命上限而减少\n\n“血雨已落，属于他的时代...结束了”",
+
+  "chest_vows.book.abandon.main": "被掩埋的仇恨",
+  "chest_vows.book.abandon.text": "他日灭我满门\n今日便将你碎尸万段！\n\n若宣誓誓令，每次攻击都会施加邪母的诅咒\n但自身的部分生命必须献祭给邪母\n\n“邪母啊，请给我力量....”",
+
+  "chest_vows.book.blood_sacrifice.main": "血祭",
+  "chest_vows.book.blood_sacrifice.text": "饮天之血，可得长生\n疮疤组织得到大量强化且吸收所有伤害\n疮疤组织在被根除后冷却更长\n\n“献祭已成，无可挽回”",
+
+
+  "chest_vows.book.sword_holder.main": "魔族持剑者",
+  "chest_vows.book.sword_holder.text": "违抗天命者，斩！\n\n持剑攻击时有可能触发多段连斩，以及概率更高的横扫\n宣誓此誓言后除剑以外的武器造成的伤害都会减少\n\n“吾不是魔，只是不可违逆”",
+
+
+  "chest_vows.book.blood_army.main": "破望血军",
+  "chest_vows.book.blood_army.text": "只可攻，不可守，若是守就不再是破望血军了\n\n大幅度提高生命值恢复能力，每隔两秒进行一次自然恢复\n宣誓此誓言后受到攻击将无法获得治疗要过五秒正空期才能再次恢复\n\n“我想活下去”",
+
+
+  "chest_vows.book.symbiosis.main": "四相共生",
+  "chest_vows.book.symbiosis.text": "四相四侵，粉碎这因果的枷锁\n\n让创伤之痕恢复之余恢复其他四种护盾，创伤之痕只需随时间恢复，不在吸收其他护盾恢复\n除创伤之痕外的护盾恢复时间拉长",
+
+
+
+  "chest_vows.book.chief_priest.main": "混沌祭祀长",
+  "chest_vows.book.chief_priest.text": "向死而生，因果的诅咒\n\n生命值与抗性获得较大提升\n但有小概率使受到的伤害翻倍，以及小概率无法受到治疗效果\n\n“不死为僵，是好...是好”",
+
+  "chest_vows.vow.weighty_wind": "咆哮吧，这撕裂长空的咆哮",
+  "item.chest_vows.weighty_wind":"沉重之风",
+  "item.chest_vows.weighty_wind.1": "移动时不会被击退",
+  "item.chest_vows.weighty_wind.2": "移动速度固定为默认值的%d%%",
+  "chest_vows.book.weighty_wind.main": "沉重之风",
+  "chest_vows.book.weighty_wind.text": "怒吼着不公的飓风\n\n宣誓后，移动时不会被击退\n但移动速度被固定",
+
+  "chest_vows.vow.inner_demon": "这心脏充斥着无尽的魔力",
+  "item.chest_vows.inner_demon":"心魔",
+  "item.chest_vows.inner_demon.1": "生命值随击杀生物逐渐提高",
+  "item.chest_vows.inner_demon.2": "生命值每次最多只能恢复%d点",
+  "chest_vows.book.inner_demon.main": "第二面",
+  "chest_vows.book.inner_demon.text": "心魔化形，它是你的黑暗面\n\n宣誓后，生命值随杀戮的增加而增加\n但生命值每次最多只能恢复一定的值\n\n“要么被心魔控制\n要么与其融为一体....”"
 }

@@ -50,7 +50,7 @@ public class RenderVowItem {
                 pose.pushMatrix();
                 pose.translate(x, y);
                 int size = 16;
-                guiGraphics.blit(VowsRenders.Vows, image,
+                guiGraphics.blit(MRender.VowGlow, image,
                        0,0, 0, 0,
                         size, size, size, size,
                         color);

@@ -1,0 +1,17 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:self_increasing_heart",
+    "chest_item:heart",
+    "minecraft:golden_apple"
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 32,
+    "chest_item:magic_soul": 16
+  },
+  "result": "chest_vows:inner_demon",
+  "id": "chest_vows:inner_demon",
+  "count": 1
+}

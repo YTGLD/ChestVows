@@ -2,6 +2,7 @@ package com.ytgld.chest_vows.items;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.ytgld.chest_item.items.ItemBase;
 import com.ytgld.chest_item.renderer.light.Light;
 import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.sounds.CVSounds;
@@ -29,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.function.Consumer;
 
-public abstract class BaseVows extends Item {
+public abstract class BaseVows extends ItemBase {
     public BaseVows(Properties properties) {
         super(properties.stacksTo(1));
     }
@@ -71,8 +72,18 @@ public abstract class BaseVows extends Item {
     }
 
     public void tickVows(Player entity){
-
     }
+
+    @Override
+    public final Identifier identifier() {
+        return super.identifier();
+    }
+
+    @Override
+    public final void tick(Player player, ItemStack stack) {
+        super.tick(player, stack);
+    }
+
     public boolean showAttribute(){
         return false;
     }
@@ -81,7 +92,12 @@ public abstract class BaseVows extends Item {
         return HashMultimap.create();
     }
 
-    public void applyText(ItemStack stack,List<Component> tooltipComponents,TooltipFlag tooltipFlag){}
+    @Override
+    public final  Multimap<Holder<Attribute>, AttributeModifier> doAttribute(ItemStack stack, Player player) {
+        return super.doAttribute(stack, player);
+    }
+
+    public void applyText(ItemStack stack, List<Component> tooltipComponents, TooltipFlag tooltipFlag){}
 
     public void addText(List<Component> list,MutableComponent component,boolean positive){
         int color = Light.ARGB.color(255,180,135,70);
@@ -98,9 +114,15 @@ public abstract class BaseVows extends Item {
     }
 
     @Override
-    public final void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
-        super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
-        builder.accept(textMain().copy().withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
-        builder.accept(Component.translatable("chest_vows.vows.use").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+    public void text(ItemStack stack, Consumer<Component> tooltipComponents, TooltipFlag flag) {
+        super.text(stack, tooltipComponents, flag);
+        tooltipComponents.accept(textMain().copy().withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+        tooltipComponents.accept(Component.translatable("chest_vows.vows.use").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
     }
+    @Override
+    public int color(ItemStack stack) {
+        return colorAndImage().getFirst().color();
+    }
+
+
 }

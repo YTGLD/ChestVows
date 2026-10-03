@@ -1,0 +1,18 @@
+{
+  "type": "chest_item:soul_crafting",
+  "ingredients": [
+    "chest_item:soul_bottle",
+
+    "chest_item:conch",
+    "chest_item:abnormal",
+    "minecraft:golden_apple"
+  ],
+  "soul_cost": {
+    "chest_item:blood_soul": 16,
+    "chest_item:magic_soul": 16,
+    "chest_item:celestial_soul": 8
+  },
+  "result": "chest_vows:ctrl_magic",
+  "id": "chest_vows:ctrl_magic",
+  "count": 1
+}

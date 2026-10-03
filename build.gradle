@@ -131,7 +131,7 @@ repositories {
 
 // Standard Gradle dependency
 dependencies {
-    implementation "maven.modrinth:EAEFHW1O:QysNCnPz"
+    implementation "maven.modrinth:EAEFHW1O:bRV0B6yx"
     implementation "curse.maven:jei-238222:8333245"
 }
 // This block of code expands all declared replace properties in the specified resource targets.

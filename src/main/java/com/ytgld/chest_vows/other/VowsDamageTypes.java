@@ -14,9 +14,11 @@ public class VowsDamageTypes {
             ChestVows.fromNamespaceAndPath( ChestVows.MODID,"player_magic"));
 
     public static DamageSource playerMagic(Player player){
+
         RegistryAccess registryAccess = player.level().registryAccess();
         Registry<DamageType> damageTypes= registryAccess.lookupOrThrow(Registries.DAMAGE_TYPE);
         return new DamageSource(damageTypes.getOrThrow(thePlayerMagic), player);
     }
+
 
 }

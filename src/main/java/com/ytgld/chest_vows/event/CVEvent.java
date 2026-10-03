@@ -9,8 +9,10 @@ import com.ytgld.chest_vows.items.vows.blood.ChiefPriest;
 import com.ytgld.chest_vows.items.vows.blood.SwordHolder;
 import com.ytgld.chest_vows.items.vows.evil.Abandon;
 import com.ytgld.chest_vows.items.vows.evil.MutualSupport;
+import com.ytgld.chest_vows.items.vows.hyperplasia.InnerDemon;
 import com.ytgld.chest_vows.items.vows.hyperplasia.Trauma;
 import com.ytgld.chest_vows.items.vows.hyperplasia.CtrlMagic;
+import com.ytgld.chest_vows.items.vows.wind.WeightyWind;
 import com.ytgld.chest_vows.other.CVAttReg;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
@@ -21,6 +23,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
@@ -28,8 +31,11 @@ import net.neoforged.neoforge.common.util.AttributeUtil;
 import net.neoforged.neoforge.event.AddAttributeTooltipsEvent;
 import net.neoforged.neoforge.event.GatherSkippedAttributeTooltipsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
+import net.neoforged.neoforge.event.entity.living.LivingKnockBackEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.SweepAttackEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
@@ -38,6 +44,19 @@ import java.util.List;
 import java.util.Set;
 
 public class CVEvent {
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public void eventLow(LivingDamageEvent.Pre event){
+        Trauma.event(event);
+    }
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public void eventLow(LivingHealEvent event){
+        InnerDemon.event(event);
+    }
+
+    @SubscribeEvent
+    public void event(LivingKnockBackEvent event){
+        WeightyWind.event(event);
+    }
 
     @SubscribeEvent
     public void event(LivingDamageEvent.Pre event){
@@ -45,7 +64,6 @@ public class CVEvent {
         BloodArmy.event(event);
         ChiefPriest.event(event);
         Abandon.event(event);
-        Trauma.event(event);
         CtrlMagic.event(event);
     }
     @SubscribeEvent
@@ -57,6 +75,10 @@ public class CVEvent {
     @SubscribeEvent
     public void event(AttackEntityEvent event){
         CtrlMagic.event(event);
+    }
+    @SubscribeEvent
+    public void event(LivingDeathEvent event){
+        InnerDemon.event(event);
     }
     @SubscribeEvent
     public void event(SweepAttackEvent event){

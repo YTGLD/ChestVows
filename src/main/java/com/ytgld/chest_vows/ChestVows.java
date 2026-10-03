@@ -44,6 +44,11 @@ public class ChestVows {
                 event.getEntity().getData(CVAttReg.vows).addAll(
                         event.getOriginal().getData(CVAttReg.vows));
             }
+            if (event.isWasDeath() && event.getOriginal().hasData(CVAttReg.playerTag)) {
+                event.getEntity().getData(CVAttReg.playerTag).map().clear();
+                event.getEntity().getData(CVAttReg.playerTag).map().putAll(
+                        event.getOriginal().getData(CVAttReg.playerTag).map());
+            }
         });
     }
 
