@@ -147,6 +147,36 @@
 
 
   "chest_vows.book.chief_priest.main": "混沌祭祀长",
-  "chest_vows.book.chief_priest.text": "向死而生，因果的诅咒\n\n生命值与抗性获得较大提升\n但有小概率使受到的伤害翻倍，以及小概率无法受到治疗效果\n\n“不死为僵，是好...是好”"
+  "chest_vows.book.chief_priest.text": "向死而生，因果的诅咒\n\n生命值与抗性获得较大提升\n但有小概率使受到的伤害翻倍，以及小概率无法受到治疗效果\n\n“不死为僵，是好...是好”",
+
+
+
+  "chest_vows.vow.pain_soul": "顺我者昌，逆我者亡",
+  "item.chest_vows.pain_soul": "无止增生之苦",
+  "item.chest_vows.pain_soul.1": "所有护盾容量随生命修正而增长",
+  "item.chest_vows.pain_soul.3": "最大生命值降低%d%%",
+  "item.chest_vows.pain_soul.4": "所有护盾容量可随生命修正变化而减少",
+
+
+  "chest_vows.vow.ctrl_magic": "大局已定",
+  "item.chest_vows.ctrl_magic": "魔法掌控",
+  "item.chest_vows.ctrl_magic.1": "造成的魔法类型伤害提高%d%%",
+  "item.chest_vows.ctrl_magic.2": "将造成物理伤害的%d%%转换成魔法类型",
+  "item.chest_vows.ctrl_magic.3": "对穿透伤害的敏感度显著提高",
+
+  "chest_vows.vow.weighty_wind": "咆哮吧，这撕裂长空的咆哮",
+  "item.chest_vows.weighty_wind":"沉重之风",
+  "item.chest_vows.weighty_wind.1": "移动时不会被击退",
+  "item.chest_vows.weighty_wind.2": "移动速度固定为默认值的%d%%",
+  "chest_vows.book.weighty_wind.main": "沉重之风",
+  "chest_vows.book.weighty_wind.text": "怒吼着不公的飓风\n\n宣誓后，移动时不会被击退\n但移动速度被固定",
+
+
+  "chest_vows.vow.inner_demon": "这心脏充斥着无尽的魔力",
+  "item.chest_vows.inner_demon":"心魔",
+  "item.chest_vows.inner_demon.1": "生命值随击杀生物逐渐提高",
+  "item.chest_vows.inner_demon.2": "生命值每次最多只能恢复%d点",
+  "chest_vows.book.inner_demon.main": "第二面",
+  "chest_vows.book.inner_demon.text": "心魔化形，它是你的黑暗面\n\n宣誓后，生命值随杀戮的增加而增加\n但生命值每次最多只能恢复一定的值\n\n“要么被心魔控制\n要么与其融为一体....”"
 
 }

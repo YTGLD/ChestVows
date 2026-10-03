@@ -1,6 +1,7 @@
 package com.ytgld.chest_vows;
 
 import com.ytgld.chest_vows.other.CVAttReg;
+import com.ytgld.chest_vows.other.IVowsPlayer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,7 +33,11 @@ public class VowHandler {
         }
         return set;
     }
-
+    public static void clearModify(Player player){
+        if (player instanceof IVowsPlayer iVowsPlayer) {
+            iVowsPlayer.chestVows26_2$clear();
+        }
+    }
 
     public static boolean addVows(Player player,String itemName){
         Set<String> strings = player.getData(CVAttReg.vows);

@@ -7,6 +7,7 @@
     "ComplexComponentsMixin",
     "EventMainMixin",
     "EvilMotherMixin",
+    "OblivionMixin",
     "ShieldRenderHandlerMixin",
     "SoulBottleHandlerMixin",
     "SoulBottleMixin",

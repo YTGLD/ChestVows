@@ -2,9 +2,11 @@ package com.ytgld.chest_vows.mixin.common;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.ytgld.chest_item.other.IPlayer;
 import com.ytgld.chest_vows.VowHandler;
 import com.ytgld.chest_vows.items.BaseVows;
 import com.ytgld.chest_vows.other.CVAttReg;
+import com.ytgld.chest_vows.other.IVowsPlayer;
 import net.minecraft.core.Holder;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -21,7 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 @Mixin(Player.class)
-public class PlayerMixin {
+public class PlayerMixin implements IVowsPlayer {
     @Unique
     private Map<Item, Multimap<Holder<Attribute>, AttributeModifier>> ChestVows$AttributeModifier = new HashMap<>();
     @Unique
@@ -46,5 +48,13 @@ public class PlayerMixin {
     @Inject(method = "tick", at = @At(value = "RETURN"))
     private void tick(CallbackInfo ci) {
         ChestVows$updateAttribute();
+    }
+
+    @Override
+    public void chestVows26_2$clear() {
+        Player player = (Player) (Object) this;
+        for(Multimap<Holder<Attribute>, AttributeModifier> attributeModifierMultimap : this.ChestVows$AttributeModifier.values()) {
+            player.getAttributes().removeAttributeModifiers(attributeModifierMultimap);
+        }
     }
 }
